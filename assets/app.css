@@ -58,3 +58,48 @@ nav a::after {
 nav a:hover {
     font-weight: bold;
 }
+
+.profile img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.profile figcaption {
+    font-size: smaller;
+}
+
+.profile > *:first-child {
+    width: 100%;
+}
+
+.profile > *:not(:first-child) {
+    padding: 0 20px;
+    margin: 0;
+}
+
+.profile > figure {
+    text-align: center;
+}
+
+.profile > div {
+    flex: 1;
+}
+
+.profile > *:last-child {
+    width: 100%;
+}
+
+.profile table th {
+    padding-right: 20px;
+    text-align: left;
+}
+
+aside {
+    padding: 0 80px;
+}
