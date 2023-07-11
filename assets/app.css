@@ -20,3 +20,18 @@ body {
     text-align: center;
     color: white;
 }
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav {
+    background-color: #006e69;
+    padding: 5px;
+}
