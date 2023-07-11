@@ -39,6 +39,8 @@ nav li {
 nav {
     background-color: #006e69;
     padding: 5px;
+    position: sticky;
+    top: 0;
 }
 
 nav a {
