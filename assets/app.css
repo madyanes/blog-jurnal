@@ -12,3 +12,11 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.jumbotron {
+    font-size: 20px;
+    padding: 60px;
+    background-color: teal;
+    text-align: center;
+    color: white;
+}
