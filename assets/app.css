@@ -123,6 +123,9 @@ footer {
     background-color: #d8fffd67;
 
     transition: background-color 0.2s ease-out;
+
+    font-size: 1.3rem;
+    line-height: 2rem;
 }
 
 #content article:hover {
@@ -132,4 +135,9 @@ footer {
 
 #content article:not(:first-child) {
     margin-top: 10px;
+}
+
+h2 {
+    border-bottom: 1px solid #04918a;
+    color: #006e69;
 }
