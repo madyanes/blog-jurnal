@@ -138,3 +138,31 @@ h2 {
     border-bottom: 1px solid #04918a;
     color: #006e69;
 }
+
+@media screen and (max-width: 768px) {   
+    nav ul {
+        justify-content: center;
+        font-size: xx-small;
+    }
+
+    .jumbotron {
+        padding: 30px;
+    }
+
+    #content, aside {
+        padding: 0 20px;
+    }
+
+    #content article {
+        font-size: small;
+        line-height: 1.5;
+    }
+
+    aside article {
+        font-size: small;
+    }
+
+    #about-me figure {
+        width: 100%;
+    }
+}
