@@ -112,3 +112,24 @@ footer {
     text-align: center;
     color: white;
 }
+
+#content {
+    padding: 0 80px;
+}
+
+#content article {
+    border: 1px solid #98b8b6;
+    padding: 0 30px;
+    background-color: #d8fffd67;
+
+    transition: background-color 0.2s ease-out;
+}
+
+#content article:hover {
+    background-color: #00A693;
+    color: white;
+}
+
+#content article:not(:first-child) {
+    margin-top: 10px;
+}
