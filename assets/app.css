@@ -86,13 +86,32 @@ nav a:hover {
     text-align: center;
 }
 
-.profile > div {
+.profile > div:not(:last-child) {
     flex: 1;
 }
 
-.profile > *:last-child {
-    width: 100%;
+.profile #social-media {
+    border-left: 1px solid #98b8b6;
+    width: 20%;
+    line-height: 2rem;
 }
+
+.profile #social-media a {
+    text-decoration: none;
+    color: black;
+}
+
+.profile #social-media a:visited {
+    color: black;
+}
+
+.profile h3 {
+    margin: 0;
+}
+
+/* .profile > *:last-child {
+    width: 100%;
+} */
 
 .profile table th {
     padding-right: 20px;
@@ -103,7 +122,7 @@ aside {
     padding: 0 80px;
 }
 
-footer {
+body > footer {
     padding: 20px;
     background-color: #006e69;
     text-align: center;
