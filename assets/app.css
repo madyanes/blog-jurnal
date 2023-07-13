@@ -185,6 +185,10 @@ h2 {
         font-size: small;
     }
 
+    .profile img, .profile h3 {
+        margin-top: 30px;
+    }
+
     #about-me figure {
         width: 100%;
     }
