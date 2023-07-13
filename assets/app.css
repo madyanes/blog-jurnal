@@ -123,6 +123,10 @@ aside {
     padding: 0 80px;
 }
 
+aside article {
+    font-size: 1.25rem;
+}
+
 body > footer {
     padding: 20px;
     background-color: #006e69;
@@ -162,7 +166,7 @@ h2 {
     margin-top: 50px;
 }
 
-@media screen and (max-width: 768px) {   
+@media screen and (max-width: 840px) {   
     nav ul {
         justify-content: center;
         font-size: xx-small;
