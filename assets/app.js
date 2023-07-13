@@ -26,6 +26,9 @@ const login = () => {
         document.querySelector('#logout').style.setProperty('display', 'inline', 'important')
 
         closeLoginForm()
+
+        localStorage.setItem('loginStatus', 1)
+        showOrHidePostForm()
     }
 }
 
@@ -34,6 +37,20 @@ const logout = () => {
     console.log('logout')
     document.querySelector('#logout').style.display = 'none'
     document.querySelector('#login').style.setProperty('display', 'inline', 'important')
+
+    localStorage.setItem('loginStatus', 0)
+    showOrHidePostForm()
+}
+
+// tampilkan atau sembunyikan form post
+const showOrHidePostForm = () => {
+    if (localStorage.getItem('loginStatus') == 1) {
+        document.querySelector('#form-post').style.display = 'block'
+        console.log(1)
+    } else {
+        document.querySelector('#form-post').style.display = 'none'
+        console.log(2)
+    }
 }
 
 
