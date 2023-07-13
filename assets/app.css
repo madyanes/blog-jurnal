@@ -38,6 +38,7 @@ nav {
     padding: 5px;
     top: 0;
     position: sticky;
+    z-index: 999;
 }
 
 nav a {
@@ -146,8 +147,9 @@ body > footer {
 }
 
 #content article:hover {
-    background-color: #00A693;
-    color: white;
+    /* background-color: #00A693;
+    color: white; */
+    transform: scale(1.01);
 }
 
 #content article:not(:first-child) {
