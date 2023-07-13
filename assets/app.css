@@ -157,6 +157,7 @@ body > footer {
 h2 {
     border-bottom: 1px solid #04918a;
     color: #006e69;
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 768px) {   
