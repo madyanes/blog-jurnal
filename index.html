@@ -10,12 +10,12 @@
 <body>
     <header>
         <div id="auth">
-            <span>
+            <span id="login">
                 <a href="#">
                     <i class="fa-solid fa-arrow-right-to-bracket"></i> Login
                 </a>
             </span>
-            <span>
+            <span id="logout">
                 <a href="#">
                     <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
                 </a>
@@ -139,5 +139,24 @@
     <footer>
         <p>Jurnal Harian oleh Ian &copy; 2023</p>
     </footer>
+    <div class="form-login-popup" id="form-login">
+        <form>
+            <div>
+                <label for="username">Username</label>
+                <br>
+                <input type="text" id="username">
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <br>
+                <input type="password" id="password">
+            </div>
+            <div>
+                <button>Masuk</button>
+                <button id="btn-login-batal">Batal</button>
+            </div>
+        </form>
+    </div>
+    <script src="assets/app.js"></script>
 </body>
 </html>

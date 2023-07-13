@@ -11,6 +11,25 @@ body {
     margin: 0;
 }
 
+#logout {
+    display: none !important;
+}
+
+.form-login-popup {
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 50vh;
+    padding-left: 80px;
+}
+
+.form-login-popup form {
+    display: inline-block;
+    background-color: #4FFFB0;
+    padding: 10px;
+    border: 1px solid #006e69;
+}
+
 header {
     display: inline;
 }
