@@ -15,6 +15,22 @@ header {
     display: inline;
 }
 
+header #auth {
+    background-color: #18453B;
+    color: white;
+    text-align: right;
+}
+
+header #auth span {
+    display: inline-block;
+    padding-right: 60px;
+}
+
+header #auth span a {
+    text-decoration: none;
+    color: white;
+}
+
 .jumbotron {
     font-size: 20px;
     padding: 60px;
