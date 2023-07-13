@@ -185,4 +185,17 @@ h2 {
     #about-me figure {
         width: 100%;
     }
+    
+    .profile #social-media {
+        width: 100%;
+        border: none;
+        margin-top: 20px;
+        display: flex;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .profile #social-media > div {
+        display: inline-block;
+    }
 }
