@@ -55,6 +55,7 @@ const showOrHidePostForm = () => {
 
 // tampilkan posting baru
 const createAndShowPost = () => {
+    const new_post_title = document.querySelector('input[name="new-post-title"]').value
     const new_post = document.querySelector('textarea').value
     
     if (new_post !== '') {
@@ -64,11 +65,13 @@ const createAndShowPost = () => {
             console.log('kk')
         }
 
+        const newTitle = document.createElement('h3')
         const newParagraph = document.createElement('p')
 
         const post = document.querySelector('#content article:first-child')
         const copy = post.cloneNode(false)
 
+        copy.appendChild(newTitle).innerHTML = new_post_title
         copy.appendChild(newParagraph).textContent = new_post
         post.parentNode.insertBefore(copy, post)
     }
