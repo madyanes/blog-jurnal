@@ -53,6 +53,25 @@ const showOrHidePostForm = () => {
     }
 }
 
+// tampilkan posting baru
+const createAndShowPost = () => {
+    const new_post = document.querySelector('textarea').value
+    
+    if (localStorage.getItem('last_number') === null) {
+        const last_number = 1
+        localStorage.setItem(`new_post_${ last_number }`, new_post)
+        console.log('kk')
+    }
+    
+    const newParagraph = document.createElement('p')
+    
+    const post = document.querySelector('#content article:first-child')
+    const copy = post.cloneNode(false)
+    
+    copy.appendChild(newParagraph).textContent = new_post
+    post.parentNode.insertBefore(copy, post)
+}
+
 
 // eksekusi fungsi di bawah setelah dokumen ditampilkan keseluruhan
 window.onload = checkOrCreateUsername()
@@ -62,3 +81,4 @@ document.querySelector('#login').addEventListener('click', openLoginForm)
 document.querySelector('#btn-login-batal').addEventListener('click', closeLoginForm)
 document.querySelector('#btn-login').addEventListener('click', login)
 document.querySelector('#logout').addEventListener('click', logout)
+document.querySelector('#form-post button').addEventListener('click', createAndShowPost)
