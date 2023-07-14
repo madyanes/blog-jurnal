@@ -80,9 +80,20 @@ const createAndShowPost = () => {
     }
 }
 
+// simpan postingan baru
+const retrieveLocalPosts = () => {
+    if (!localStorage.getItem('localPosts')) {
+        localStorage.setItem('localPosts', '[]')
+    }
+
+    let localPosts = JSON.parse(localStorage.getItem('localPosts'))
+    console.log(localPosts)
+}
+
 
 // eksekusi fungsi di bawah setelah dokumen ditampilkan keseluruhan
 window.onload = checkOrCreateUsername()
+window.onload = retrieveLocalPosts()
 
 // Event Listeners
 document.querySelector('#login').addEventListener('click', openLoginForm)
