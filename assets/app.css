@@ -41,18 +41,33 @@ input[name="new-post-title"] {
 }
 
 .form-login-popup {
-    display: none;
-    width: 100%;
+    /* display: none; */
     position: fixed;
-    top: 50vh;
-    padding-left: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
 }
 
 .form-login-popup form {
     display: inline-block;
-    background-color: #4FFFB0;
+    background-color: #04918a;
     padding: 10px;
     border: 1px solid #006e69;
+    width: 300px;
+    color: white;
+    font-weight: bold;
+}
+
+.form-login-popup form div > * {
+    margin: 0.2rem 0;
+    padding: 0.4rem;
+    width: 100%;
+}
+
+.form-login-popup form div:last-child {
+    display: flex;
+    gap: 1rem;
 }
 
 header {
