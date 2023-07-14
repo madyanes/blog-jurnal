@@ -16,6 +16,16 @@ const openLoginForm = () => {
     document.querySelector('.form-login-popup').style.display = 'block';
 }
 
+// notifikasi login dan logout
+const loginLogoutNotif = (msg) => {
+    document.querySelector('.notification p').textContent = msg
+    document.querySelector('.notification').style.display = 'block'
+
+    setInterval(() => {
+        document.querySelector('.notification').style.display = 'none'
+    }, 5000)
+}
+
 // login
 const login = () => {
     const username = document.querySelector('#username').value
@@ -29,6 +39,7 @@ const login = () => {
 
         localStorage.setItem('loginStatus', 1)
         showOrHidePostForm()
+        loginLogoutNotif('Login Berhasil')
     }
 }
 
@@ -39,6 +50,7 @@ const logout = () => {
 
     localStorage.setItem('loginStatus', 0)
     showOrHidePostForm()
+    loginLogoutNotif('Logout Berhasil')
 }
 
 // tampilkan atau sembunyikan form post

@@ -19,6 +19,15 @@ body {
     display: none;
 }
 
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00A877;
+    padding: 0 1rem;
+}
+
 input[name="new-post-title"] {
     display: block;
     width: 100%;
