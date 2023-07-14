@@ -11,6 +11,10 @@ body {
     margin: 0;
 }
 
+.favicon {
+    height: 1em;
+}
+
 #logout {
     display: none !important;
 }
