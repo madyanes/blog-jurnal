@@ -4,8 +4,9 @@ Projek ini merupakan website versi alternatif dari projek submission Dicoding "D
 ## Tentang Projek Ini (Fitur)
 - [x] Masih mengusung tema yang sama, yaitu membangun situs personal sebagai jurnal/blog dan promosi keahlian.
 - [x] Konsep desain adalah _clean & minimalist_.
-- [ ] Memanfaatkan fitur **local storage** peramban web.
-- [ ] Memanipulasi data di _local storage_ dengan bahasa skrip **JavaScript**.
-- [ ] Menggunakan sistem **login** sederhana.
-- [ ] Membuat, menghapus, dan edit postingan (artikel).
-- [ ] Mengunci postingan tertentu.
+- [x] Memanfaatkan fitur **local storage** peramban web.
+- [x] Memanipulasi data di _local storage_ dengan bahasa skrip **JavaScript**.
+- [x] Menggunakan sistem **login** sederhana.
+- [x] Membuat postingan (artikel).
+- [ ] Edit postingan (artikel).
+- [ ] Hapus postingan (artikel).
