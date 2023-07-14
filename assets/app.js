@@ -57,19 +57,21 @@ const showOrHidePostForm = () => {
 const createAndShowPost = () => {
     const new_post = document.querySelector('textarea').value
     
-    if (localStorage.getItem('last_number') === null) {
-        const last_number = 1
-        localStorage.setItem(`new_post_${ last_number }`, new_post)
-        console.log('kk')
+    if (new_post !== '') {
+        if (localStorage.getItem('last_number') === null) {
+            const last_number = 1
+            localStorage.setItem(`new_post_${last_number}`, new_post)
+            console.log('kk')
+        }
+
+        const newParagraph = document.createElement('p')
+
+        const post = document.querySelector('#content article:first-child')
+        const copy = post.cloneNode(false)
+
+        copy.appendChild(newParagraph).textContent = new_post
+        post.parentNode.insertBefore(copy, post)
     }
-    
-    const newParagraph = document.createElement('p')
-    
-    const post = document.querySelector('#content article:first-child')
-    const copy = post.cloneNode(false)
-    
-    copy.appendChild(newParagraph).textContent = new_post
-    post.parentNode.insertBefore(copy, post)
 }
 
 
