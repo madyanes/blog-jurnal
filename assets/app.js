@@ -68,26 +68,43 @@ const createAndShowPost = () => {
     const new_post = document.querySelector('textarea').value
     
     if (new_post !== '') {
-        const newTitle = document.createElement('h3')
-        const newParagraph = document.createElement('p')
-
-        const post = document.querySelector('#content article:first-child')
-        const copy = post.cloneNode(false)
-
-        copy.appendChild(newTitle).innerHTML = new_post_title
-        copy.appendChild(newParagraph).textContent = new_post
-        post.parentNode.insertBefore(copy, post)
+        storePostToLocalStorage(new_post_title, new_post)
+        retrieveLocalPosts()
     }
 }
 
-// simpan postingan baru
+// tampilkan postingan baru
 const retrieveLocalPosts = () => {
     if (!localStorage.getItem('localPosts')) {
         localStorage.setItem('localPosts', '[]')
     }
 
     let localPosts = JSON.parse(localStorage.getItem('localPosts'))
-    console.log(localPosts)
+
+    localPosts.forEach(post => {
+        const newTitle = document.createElement('h3')
+        const newParagraph = document.createElement('p')
+    
+        const postNode = document.querySelector('#content article:first-child')
+        const copy = postNode.cloneNode(false)
+        
+        const singlePost = JSON.parse(post)
+        
+        copy.appendChild(newTitle).innerHTML = singlePost[0]
+        copy.appendChild(newParagraph).textContent = singlePost[1]
+        
+        postNode.parentNode.insertBefore(copy, postNode)    
+    });
+}
+
+// simpan postingan baru
+const storePostToLocalStorage = (title, post) => {
+    const newPost = JSON.stringify([title, post])
+    const localPosts = JSON.parse(localStorage.getItem('localPosts'))
+
+    localPosts.push(newPost)
+    
+    localStorage.setItem('localPosts', JSON.stringify(localPosts))
 }
 
 
