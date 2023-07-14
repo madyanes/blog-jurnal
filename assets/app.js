@@ -62,7 +62,7 @@ const showOrHidePostForm = () => {
     }
 }
 
-// tampilkan posting baru
+// buat postingan baru
 const createAndShowPost = () => {
     const new_post_title = document.querySelector('input[name="new-post-title"]').value
     const new_post = document.querySelector('textarea').value
